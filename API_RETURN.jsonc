@@ -1,0 +1,187 @@
+// GET
+// Status Code 200
+{
+    "response": {
+        "comGarantia": {
+            "habilitado": true,
+            "parcelas": [12, 24, 36, 48],
+            "valorMin": 10.000,
+            "valorMax": 70.000,
+            "finalidades": [
+                {
+                    "labelName": "Dividas",
+                    "value": "0"
+                },
+                {
+                    "labelName": "Comércio",
+                    "value": "1"
+                },
+                {
+                    "labelName": "Viagem",
+                    "value": "2"
+                },
+                {
+                    "labelName": "Separação",
+                    "value": "3"
+                },
+                {
+                    "labelName": "Tratamento",
+                    "value": "4"
+                },
+                {
+                    "labelName": "Truco",
+                    "value": "5"
+                }
+            ],
+            "comoSoube": [
+                {
+                    "labelName": "Google",
+                    "value": "0"
+                },
+                {
+                    "labelName": "Anúncio",
+                    "value": "1"
+                },
+                {
+                    "labelName": "Outros",
+                    "value": "3"
+                }
+            ]
+        },
+        "semGarantia":{
+            "habilitado": false,
+            "parcelas": [12, 24, 36, 48],
+            "valorMin": 10.000,
+            "valorMax": 70.000,
+            "finalidades": [
+                {
+                    "labelName": "Dividas",
+                    "value": "0"
+                },
+                {
+                    "labelName": "Comércio",
+                    "value": "1"
+                },
+                {
+                    "labelName": "Viagem",
+                    "value": "2"
+                },
+                {
+                    "labelName": "Separação",
+                    "value": "3"
+                },
+                {
+                    "labelName": "Tratamento",
+                    "value": "4"
+                },
+                {
+                    "labelName": "Truco",
+                    "value": "5"
+                }
+            ],
+            "comoSoube": [
+                {
+                    "labelName": "Google",
+                    "value": "0"
+                },
+                {
+                    "labelName": "Anúncio",
+                    "value": "1"
+                },
+                {
+                    "labelName": "Outros",
+                    "value": "3"
+                }
+            ]
+        }
+    }
+}
+
+// Status Code 400
+{
+    "response": {
+        "erro": 400,
+        "mensagem": "Requisição não cumpre com os requisitos. "
+    }
+}
+
+// Status Code 401
+{
+    "response": {
+        "erro": 401,
+        "mensagem": "Origem de requisição não permitida."
+    }
+}
+
+// Status Code 429
+{
+    "response": {
+        "erro": 429,
+        "mensagem": "O serviço ultrapssou o limite de requisições permitidas."
+    }
+}
+
+// Status Code 500
+{
+    "response": {
+        "erro": 500,
+        "mensagem": "Ocorreu um erro no servidor."
+    }
+}
+
+/* ---------------------------------- */
+
+// POST 
+// Body
+{
+    "tipoEmprestimo": 0,
+    "valorDesejado": 40000.00,
+    "parcelas": 12,
+    "finalidade": "0",
+    "nome": "Jorge da Silva",
+    "cpf": "43249323423",
+    "telefone": "+5511975581678",
+    "email": "email@gmail.com",
+    "smsAutorizacao": true,
+    "politicaDePrivacidade": true,
+    "scrAutorizacao": true
+}
+
+// Status Code 201 
+{
+    "response": {
+        "e-mail": "te******@g****.com",
+    }
+}
+
+// Status Code 406
+{
+    "response": {
+        "erro": 406,
+        "mensagem": "Liberação de crédito negada"
+    }
+}
+
+// Status Code 409
+{
+    "response": {
+        "erro": 409,
+        "mensagem": "Usuário já existente"
+    }
+}
+
+// Status Code 429
+{
+    "response": {
+        "erro": 429,
+        "mensagem": "O serviço ultrapssou o limite de requisições permitidas."
+    }
+}
+
+// Status Code 500
+{
+    "response": {
+        "erro": 500,
+        "mensagem": "Ocorreu um erro no servidor."
+    }
+}
